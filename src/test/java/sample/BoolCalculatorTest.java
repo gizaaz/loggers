@@ -10,11 +10,14 @@ import static org.junit.Assert.*;
  */
 public class BoolCalculatorTest {
 
+    static final Logger logger = Logger.getLogger(BoolCalculator.class);
+
 
 
     /**  AND Кон*юнкція*/
     @Test
     public void conjunction_null_null() throws Exception {
+
         Boolean result = null;
         try {
             result = BoolCalculator.conjunction(null, null);
@@ -22,7 +25,9 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test conjunction_null_null result= " + result);
         Assert.assertEquals(null, result);
+
     }
     @Test
     public void conjunction_null_false() throws Exception {
@@ -33,6 +38,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("conjunction_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -44,6 +50,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("conjunction_null_true result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -55,6 +62,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test conjunction_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -66,6 +74,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test conjunction_false_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -77,6 +86,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test conjunction_false_true result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -88,6 +98,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test conjunction_true_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -99,6 +110,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test conjunction_true_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -110,6 +122,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test conjunction_true_true result= " + result);
         Assert.assertEquals(true, result);
     }
 
@@ -123,6 +136,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_implication_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -134,6 +148,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_implication_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -145,6 +160,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_implication_null_true result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -156,6 +172,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_implication_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -167,6 +184,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_implication_false_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -178,6 +196,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_implication_false_true result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -189,6 +208,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_implication_true_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -200,6 +220,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_implication_true_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -211,6 +232,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_implication_true_true result= " + result);
         Assert.assertEquals(false, result);
     }
     /**  REPEAT X */
@@ -223,6 +245,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_x_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -234,6 +257,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_x_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -245,6 +269,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_x_null_true result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -256,6 +281,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_x_false_null result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -267,6 +293,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_x_false_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -278,6 +305,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_x_false_true result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -289,6 +317,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_x_true_null result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -300,6 +329,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_x_true_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -311,6 +341,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_x_true_true result= " + result);
         Assert.assertEquals(true, result);
     }
 
@@ -324,6 +355,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_inverse_implication_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -335,6 +367,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_inverse_implication_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -346,6 +379,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_inverse_implication_null_true result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -357,6 +391,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_inverse_implication_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -368,6 +403,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("denial_inverse_implication_false_false= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -379,6 +415,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("denial_inverse_implication_false_true= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -390,6 +427,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_inverse_implication_true_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -401,6 +439,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("denial_inverse_implication_true_false= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -412,6 +451,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_inverse_implication_true_true result= " + result);
         Assert.assertEquals(false, result);
     }
     /** FUNCTION F5 - Repeat Y */
@@ -424,6 +464,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_y_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -435,6 +476,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_y_null_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -446,6 +488,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_y_null_true result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -457,6 +500,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_y_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -468,6 +512,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_y_false_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -479,6 +524,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_y_false_true result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -490,6 +536,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_y_true_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -501,6 +548,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_y_true_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -512,6 +560,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test repeat_y_true_true result= " + result);
         Assert.assertEquals(true, result);
     }
     /**  XOR додавання за модулем 2*/
@@ -524,6 +573,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_equivalence_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -535,6 +585,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_equivalence_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -546,6 +597,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_equivalence_null_true result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -557,6 +609,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_equivalence_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -568,6 +621,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_equivalence_false_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -579,6 +633,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_equivalence_false_true result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -590,6 +645,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_equivalence_true_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -601,6 +657,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_equivalence_true_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -612,6 +669,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_equivalence_true_true result= " + result);
         Assert.assertEquals(false, result);
     }
     /**  OR диз'юнкція*/
@@ -624,6 +682,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test disjunction_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -635,6 +694,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test disjunction_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -646,6 +706,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test disjunction_null_true result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -657,6 +718,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test disjunction_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -668,6 +730,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test disjunction_false_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -676,9 +739,11 @@ public class BoolCalculatorTest {
         try {
             result = BoolCalculator.disjunction(false, true);
         }
+
         catch (NullPointerException e){
 
         }
+        logger.info("Test disjunction_false_true result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -690,6 +755,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test disjunction_true_null result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -701,6 +767,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test disjunction_true_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -712,6 +779,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test disjunction_true_true result= " + result);
         Assert.assertEquals(true, result);
     }
     /**  NOR заперечення диз*юнкції, стрілка Пірса*/
@@ -724,6 +792,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_disjunction_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -735,6 +804,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_disjunction_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -746,10 +816,11 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_disjunction_null_true result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
-    public void denial_disjunctionfalse_null() throws Exception {
+    public void denial_disjunction_false_null() throws Exception {
         Boolean result = null;
         try {
             result = BoolCalculator.denial_disjunction(false, null);
@@ -757,6 +828,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_disjunction_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -768,6 +840,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_disjunction_false_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -779,6 +852,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_disjunction_false_true result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -790,6 +864,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_disjunction_true_null result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -801,6 +876,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_disjunction_true_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -812,6 +888,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_disjunction_true_true result= " + result);
         Assert.assertEquals(false, result);
     }
     /**  EQUIVALENCE еквівалентність */
@@ -824,6 +901,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test equivalence_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -835,6 +913,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test equivalence_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -846,6 +925,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test equivalence_null_true result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -857,6 +937,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test equivalence_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -868,6 +949,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test equivalence_false_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -879,6 +961,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test equivalence_false_true result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -890,6 +973,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test equivalence_true_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -901,6 +985,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test equivalence_true_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -912,6 +997,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test equivalence_true_true result= " + result);
         Assert.assertEquals(true, result);
     }
     /**  NOT Y заперечення другого аргументую*/
@@ -924,6 +1010,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_y_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -935,6 +1022,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_y_null_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -946,6 +1034,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_y_null_true result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -957,6 +1046,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_y_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -968,6 +1058,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_y_false_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -979,6 +1070,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_y_false_true result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -990,6 +1082,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_y_true_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1001,6 +1094,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_y_true_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -1012,6 +1106,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_y_true_true= " + result);
         Assert.assertEquals(false, result);
     }
     /**  ANTI-IMPLICATION */
@@ -1024,6 +1119,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test inverse_implication_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1035,6 +1131,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test inverse_implication_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1046,6 +1143,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test inverse_implication_null_true result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1057,6 +1155,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test inverse_implication_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1068,6 +1167,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test inverse_implication_false_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -1079,6 +1179,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test inverse_implication_false_true result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -1090,6 +1191,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test inverse_implication_true_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1101,6 +1203,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test inverse_implication_true_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -1112,6 +1215,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test inverse_implication_true_true result= " + result);
         Assert.assertEquals(true, result);
     }
     /** NOT X заперечення першого аргументу*/
@@ -1124,6 +1228,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_x_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1135,6 +1240,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_x_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1146,6 +1252,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_x_null_truel result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1157,6 +1264,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_x_false_null result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -1168,6 +1276,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_x_false_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -1179,6 +1288,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_x_false_true result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -1190,6 +1300,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_x_true_null result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -1201,6 +1312,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_x_true_falsel result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -1212,6 +1324,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_repeat_x_true_true result= " + result);
         Assert.assertEquals(false, result);
     }
     /**  IMPLICATION імплікація */
@@ -1224,6 +1337,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test implication_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1235,6 +1349,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test implication_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1246,6 +1361,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test implication_null_true result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1257,6 +1373,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test implication_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1268,6 +1385,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test implication_false_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -1279,6 +1397,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test implication_false_true result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -1290,6 +1409,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test implication_true_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1301,6 +1421,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test implication_true_false result= " + result);
         Assert.assertEquals(false, result);
     }
     @Test
@@ -1312,6 +1433,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test implication_true_true result= " + result);
         Assert.assertEquals(true, result);
     }
     /**  NOT AND заперечення кон*юнкції ,штрих Шефера  */
@@ -1324,6 +1446,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_conjunction_null_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1335,6 +1458,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_conjunction_null_false result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1346,6 +1470,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_conjunction_null_true result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1357,6 +1482,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_conjunction_false_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1368,6 +1494,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("denial_conjunction_false_false= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -1379,6 +1506,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_conjunction_false_true result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -1390,6 +1518,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_conjunction_true_null result= " + result);
         Assert.assertEquals(null, result);
     }
     @Test
@@ -1401,6 +1530,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_conjunction_true_false result= " + result);
         Assert.assertEquals(true, result);
     }
     @Test
@@ -1412,6 +1542,7 @@ public class BoolCalculatorTest {
         catch (NullPointerException e){
 
         }
+        logger.info("Test denial_conjunction_true_true result= " + result);
         Assert.assertEquals(false, result);
     }
 
